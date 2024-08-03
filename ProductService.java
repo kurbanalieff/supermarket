@@ -137,11 +137,3 @@ public class ProductService {
     }
 
 }
-
-// spring boot ni qarab chiqish kerak, general qismini;
-// git (source control) qarash kerak;
-// git (yaxshilab qarash kerak);
-// spring boot da yozishni o'rganish kerak;
-
-// stream api, optional, collectors api larni yana bir bor qarab chiqishim
-// kerak;
