@@ -16,7 +16,6 @@ public class ProductService {
 
         String isContinue;
         do {
-
             System.out.println("Enter New Product Code: ");
             int newproductCode = scanner.nextInt();
             scanner.nextLine();
@@ -54,14 +53,16 @@ public class ProductService {
                 System.out.println("*** invalid quantity ***");
             }
 
-            Optional<ProductData> productOpt = products.stream().filter(product -> product.getProductCode() == productCode).findFirst();
+            Optional<ProductData> productOpt = products.stream()
+                    .filter(product -> product.getProductCode() == productCode).findFirst();
             if (productOpt.isPresent()) {
                 ProductData product = productOpt.get();
                 double priceSubtotal = ProductData.subtotalPrice(quantity, product.getProductPrice());
                 subPrice += priceSubtotal;
                 double priceTotal = ProductData.totalPrice(quantity, product.getProductPrice(), product.tax);
                 totalPrice += priceTotal;
-                String response = product.getProductName() + "  " + quantity + " @ " + product.getProductPrice() + "  " + priceSubtotal;
+                String response = product.getProductName() + "  " + quantity + " @ " + product.getProductPrice() + "  "
+                        + priceSubtotal;
                 responses.add(response);
             } else {
                 System.out.println("*** item " + productCode + " not in inventory ***");
@@ -78,7 +79,6 @@ public class ProductService {
 
         } while (isContinue.equalsIgnoreCase("yes"));
         System.out.println("Thank you for choosing us");
-
 
     }
 
