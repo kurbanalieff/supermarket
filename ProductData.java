@@ -33,24 +33,3 @@ public class ProductData {
     }
 
 }
-// String isContinue = "no";
-// do{
-
-// }while (isContinue.equalsIgnoreCase("yes"));
-
-
-// while (true) {
-//     System.out.println("Product added successfully!!!");
-//     System.out.println();
-//     System.out.println("Would you like to add more products? (Yes || No) ");
-//     String addProduct = scanner.next();
-//     if (addProduct.equalsIgnoreCase("No")) {
-//         System.out.println("Thank you for your added product");
-//         break;
-//     } else if (addProduct.equalsIgnoreCase("Yes")) {
-//         break;
-//     } else {
-//         System.out.println("*** You have entered INCORRECT information ! ***");
-//         break;
-//     }
-// }
